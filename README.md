@@ -46,10 +46,30 @@ These screens demonstrate alarm configuration, native-device wake challenges, an
 
 This repository intentionally does not contain the complete production source code.
 
-Instead, selected engineering samples will demonstrate:
+Instead, selected engineering samples demonstrate key implementation patterns from the production application.
 
-- AlarmKit scheduling and alarm-state coordination
-- CoreMotion-based step-count challenge handling
-- Barcode scanning and native device integration
+### AlarmKit Scheduling & Coordination — `AlarmKitService.swift`
+
+Coordinates native AlarmKit authorization, scheduling, recurring alarms, snooze behavior, alarm-state monitoring, and system alarm lifecycle management.
+
+**Engineering concepts:** AlarmKit, async/await, authorization state, recurring schedules, App Intents, state coordination.
+
+[View AlarmKitService.swift](CodeSamples/AlarmKitService.swift)
+
+### CoreMotion Step Counting — `StepCounterService.swift`
+
+Wraps `CMPedometer` for the Step Count wake challenge, combining system step updates with short-interval polling to provide responsive real-time UI feedback.
+
+**Engineering concepts:** CoreMotion, permissions, async tasks, polling, observable state, physical-device integration.
+
+[View StepCounterService.swift](CodeSamples/StepCounterService.swift)
+
+### Challenge Stack Orchestration — `AlarmRingingFlowView.swift`
+
+Coordinates SnoozeLock's state-driven alarm workflow from ringing through sequential wake challenges and completion. The flow tracks progress through an ordered challenge stack and routes users through each required step before dismissal.
+
+**Engineering concepts:** SwiftUI state management, workflow orchestration, sequential state transitions, async operations, reusable views, animation, analytics.
+
+[View AlarmRingingFlowView.swift](CodeSamples/AlarmRingingFlowView.swift)
 
 These samples are included to demonstrate engineering decisions and implementation patterns without publishing the complete application.
