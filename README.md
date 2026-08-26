@@ -36,7 +36,11 @@ A more detailed architecture overview is available in:
 
 ## App Screenshots
 
-Selected production screenshots will be added to the `Screenshots` directory.
+| Alarm Setup | Challenge Types | Challenge Stacking |
+|:---:|:---:|:---:|
+| <img src="Screenshots/alarm-setup.png" alt="SnoozeLock alarm setup" width="300"> | <img src="Screenshots/challenge-types.png" alt="SnoozeLock wake challenge types" width="300"> | <img src="Screenshots/challenge-stacking.png" alt="SnoozeLock sequential challenge stacking" width="300"> |
+
+These screens demonstrate alarm configuration, native-device wake challenges, and sequential challenge workflows.
 
 ## Selected Code Samples
 
